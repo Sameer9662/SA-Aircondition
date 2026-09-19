@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ice-light: #F4FBFD;
+  --color-ice-blue: #D7EEF4;
+  --color-cool-blue: #B9DDE8;
+  --color-teal: #0F8F9A;
+  --color-deep-teal: #086B75;
+}
+
+@layer base {
+  :root {
+    /* Base Backgrounds */
+    --ice-light: #F8FAFC; /* Ultra-clean off-white background */
+    --bg-card: #FFFFFF;   /* Pure white for cards */
+    
+    /* Subtle Highlights & Borders */
+    --ice-blue: #E0F2FE;  /* Soft sky blue for subtle accents */
+    --cool-blue: #BAE6FD; /* Clear sky blue for borders/hover */
+    
+    /* Primary Brand (Matches the vibrant SA logo) */
+    --teal: #0284C7;      /* Trustworthy, vibrant professional Blue */
+    
+    /* Deep Brand / Typography (Modern high-contrast dark) */
+    --deep-teal: #0F172A; /* Sleek Slate-900 for headings and footer */
+    
+    /* Text Colors */
+    --text-heading: #0F172A; 
+    --text-body: #334155;    
+    --text-muted: #64748B;   
+    
+    /* Logo Settings */
+    --logo-bg: transparent;
+    --logo-blend: multiply;
+  }
+  
+
+  
+  body {
+    background-color: var(--ice-light);
+    color: var(--text-body);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body {
+    color: #e2e8f0; /* Slate 200 for dark mode body text */
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+}
